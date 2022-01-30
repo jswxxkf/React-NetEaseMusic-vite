@@ -1,11 +1,18 @@
 module.exports = {
-  extends: [require.resolve('@umijs/fabric/dist/eslint'), 'plugin:prettier/recommended'],
-  // in antd-design-pro
-  globals: {
-    ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION: true,
-    page: true
+  env: {
+    browser: true,
+    node: true,
+    es2021: true
   },
-  rules: {
-    '@typescript-eslint/no-shadow': 'off'
-  }
+  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  parserOptions: {
+    ecmaVersion: 12,
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  rules: {}
 }

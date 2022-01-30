@@ -20,7 +20,6 @@
     "moduleResolution": "Node",
     // 允许以模块方式导入.json文件
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
     // 文件路径在解析时，基URL
@@ -30,5 +29,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["./src"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
 }
