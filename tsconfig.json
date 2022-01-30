@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    // 目标代码(ts->js(es5?es6?))
+    "target": "ESNext",
+    // 目标代码所使用的模块化方案(UMD?CommonJS?ESM?AMD?CMD?)
+    "module": "ESNext",
+    "useDefineForClassFields": true,
+    // 指定可以在项目中直接使用的库中类型(Proxy/Window/Document...)
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    // 跳过一些库的类型检测(@types/lodash,@types/axios...)
+    "skipLibCheck": true,
+    // export default 和 module.exports = {} 可否混合使用
+    "esModuleInterop": false,
+    // 是否允许一行内合并默认导出项
+    "allowSyntheticDefaultImports": true,
+    // 严格模式检查
+    "strict": true,
+    // 按照node的方式去解析模块
+    "moduleResolution": "Node",
+    // 允许以模块方式导入.json文件
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    // 文件路径在解析时，基URL
+    "baseUrl": ".",
+    // 路径解析(需要先指定baseUrl)
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["./src"]
+}
